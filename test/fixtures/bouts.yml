@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bout_number: 1
+  score_left: 1
+  score_right: 1
+  priority: MyString
+
+two:
+  bout_number: 1
+  score_left: 1
+  score_right: 1
+  priority: MyString

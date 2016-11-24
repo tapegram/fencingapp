@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  epee_rating: MyString
+  epee_rating_year: 1
+  foil_rating: MyString
+  foil_rating_year: 1
+  sabre_rating: MyString
+  sabre_rating_year: 1
+
+two:
+  epee_rating: MyString
+  epee_rating_year: 1
+  foil_rating: MyString
+  foil_rating_year: 1
+  sabre_rating: MyString
+  sabre_rating_year: 1
