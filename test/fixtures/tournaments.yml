@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  event: MyString
+  gender: MyString
+  minAge: 1
+  maxAge: 1
+  minRating: MyString
+  maxRating: MyString
+  registration_close: 2016-11-24 19:27:19
+
+two:
+  name: MyString
+  event: MyString
+  gender: MyString
+  minAge: 1
+  maxAge: 1
+  minRating: MyString
+  maxRating: MyString
+  registration_close: 2016-11-24 19:27:19

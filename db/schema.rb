@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161124185948) do
+ActiveRecord::Schema.define(version: 20161124193842) do
 
   create_table "bouts", force: :cascade do |t|
     t.integer  "bout_number"
@@ -22,7 +22,10 @@ ActiveRecord::Schema.define(version: 20161124185948) do
     t.integer  "fencer_right_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.integer  "pool_id"
   end
+
+  add_index "bouts", ["pool_id"], name: "index_bouts_on_pool_id"
 
   create_table "fencers", force: :cascade do |t|
     t.string   "epee_rating"
@@ -33,6 +36,28 @@ ActiveRecord::Schema.define(version: 20161124185948) do
     t.integer  "sabre_rating_year"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+  end
+
+  create_table "pools", force: :cascade do |t|
+    t.boolean  "finished"
+    t.integer  "tournament_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "pools", ["tournament_id"], name: "index_pools_on_tournament_id"
+
+  create_table "tournaments", force: :cascade do |t|
+    t.string   "name"
+    t.string   "event"
+    t.string   "gender"
+    t.integer  "minAge"
+    t.integer  "maxAge"
+    t.string   "minRating"
+    t.string   "maxRating"
+    t.datetime "registration_close"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
 end
