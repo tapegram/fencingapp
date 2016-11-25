@@ -56,7 +56,9 @@ Rails.application.routes.draw do
   
   namespace :api do
     namespace :v1 do
-      resources :tournaments, only: [:index, :create, :show, :update, :destroy]
+      resources :tournaments, only: [:create, :show, :update, :destroy] do
+        resources :pools, only: [:index, :create, :show, :update, :destroy]
+      end
     end
   end
 end

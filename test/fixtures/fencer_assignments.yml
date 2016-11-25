@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tournament_id: 
+  pool_id: 
+  initial_seed: 1
+  seed_after_pools: 1
+  final_place: 1
+
+two:
+  tournament_id: 
+  pool_id: 
+  initial_seed: 1
+  seed_after_pools: 1
+  final_place: 1

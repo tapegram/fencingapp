@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161124193842) do
+ActiveRecord::Schema.define(version: 20161125021937) do
 
   create_table "bouts", force: :cascade do |t|
     t.integer  "bout_number"
@@ -26,6 +26,19 @@ ActiveRecord::Schema.define(version: 20161124193842) do
   end
 
   add_index "bouts", ["pool_id"], name: "index_bouts_on_pool_id"
+
+  create_table "fencer_assignments", force: :cascade do |t|
+    t.integer  "tournament_id"
+    t.integer  "pool_id"
+    t.integer  "initial_seed"
+    t.integer  "seed_after_pools"
+    t.integer  "final_place"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "fencer_assignments", ["pool_id"], name: "index_fencer_assignments_on_pool_id"
+  add_index "fencer_assignments", ["tournament_id"], name: "index_fencer_assignments_on_tournament_id"
 
   create_table "fencers", force: :cascade do |t|
     t.string   "epee_rating"
